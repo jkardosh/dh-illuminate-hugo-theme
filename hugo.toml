@@ -1,4 +1,4 @@
-baseURL = 'https://github.com/jkardosh/dh-illuminate-hugo-theme'
+baseURL = 'https://jkardosh.github.io/dh-illuminate-hugo-theme/'
 languageCode = 'en-us'
 title = 'DH Illuminate'
 theme = 'dh-illuminate'
