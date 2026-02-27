@@ -53,13 +53,13 @@
         <div class="post-nav__item">
           {{- if $prev }}
             <span class="post-nav__label">← Previous</span>
-            <a href="{{ $prev.Permalink }}" class="post-nav__title">{{ $prev.Title }}</a>
+            <a href="{{ $prev.RelPermalink }}" class="post-nav__title">{{ $prev.Title }}</a>
           {{- end }}
         </div>
         <div class="post-nav__item post-nav__item--next">
           {{- if $next }}
             <span class="post-nav__label">Next →</span>
-            <a href="{{ $next.Permalink }}" class="post-nav__title">{{ $next.Title }}</a>
+            <a href="{{ $next.RelPermalink }}" class="post-nav__title">{{ $next.Title }}</a>
           {{- end }}
         </div>
       </nav>

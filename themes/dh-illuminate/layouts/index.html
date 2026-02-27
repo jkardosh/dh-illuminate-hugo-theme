@@ -198,7 +198,7 @@
 
     <!-- Featured Post -->
     <article class="featured-post">
-      <a class="featured-post__image" href="{{ $featured.Permalink }}" aria-label="Read: {{ $featured.Title }}" tabindex="-1">
+      <a class="featured-post__image" href="{{ $featured.RelPermalink }}" aria-label="Read: {{ $featured.Title }}" tabindex="-1">
         <img
           src="https://picsum.photos/seed/{{ $featuredSeed }}/900/600"
           alt="{{ $featured.Title }}"
@@ -220,10 +220,10 @@
           <span class="reading-chip" style="font-size:0.75rem;color:var(--text-muted);background:var(--gray-100);">{{ $featured.ReadingTime }} min read</span>
         </div>
         <h3 class="featured-post__title">
-          <a href="{{ $featured.Permalink }}">{{ $featured.Title }}</a>
+          <a href="{{ $featured.RelPermalink }}">{{ $featured.Title }}</a>
         </h3>
         <p class="featured-post__excerpt">{{ $featured.Summary }}</p>
-        <a href="{{ $featured.Permalink }}" class="btn btn--teal btn--sm" style="margin-top:1.5rem;">Read article →</a>
+        <a href="{{ $featured.RelPermalink }}" class="btn btn--teal btn--sm" style="margin-top:1.5rem;">Read article →</a>
       </div>
     </article>
 
@@ -233,7 +233,7 @@
       {{- range $rest }}
         {{- $seed := .Slug | default (.Title | urlize) }}
         <article class="post-card">
-          <a href="{{ .Permalink }}" aria-label="Read: {{ .Title }}">
+          <a href="{{ .RelPermalink }}" aria-label="Read: {{ .Title }}">
             <div class="post-card__image">
               <img
                 src="https://picsum.photos/seed/{{ $seed }}/640/360"
@@ -254,12 +254,12 @@
               </time>
             </div>
             <h3 class="post-card__title">
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
+              <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </h3>
             <p class="post-card__excerpt">{{ .Summary }}</p>
           </div>
           <div class="post-card__footer">
-            <a href="{{ .Permalink }}" class="post-card__readmore">Read article</a>
+            <a href="{{ .RelPermalink }}" class="post-card__readmore">Read article</a>
           </div>
         </article>
       {{- end }}

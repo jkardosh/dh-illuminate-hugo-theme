@@ -21,7 +21,7 @@
         {{- range $pages }}
           {{- $seed := .Slug | default (.Title | urlize) }}
           <article class="post-card">
-            <a href="{{ .Permalink }}" aria-label="Read: {{ .Title }}">
+            <a href="{{ .RelPermalink }}" aria-label="Read: {{ .Title }}">
               <div class="post-card__image">
                 <img
                   src="https://picsum.photos/seed/{{ $seed }}/640/360"
@@ -43,12 +43,12 @@
                 <span class="reading-chip" style="font-size:0.75rem;color:var(--text-muted);background:var(--gray-100);">{{ .ReadingTime }} min read</span>
               </div>
               <h2 class="post-card__title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
               </h2>
               <p class="post-card__excerpt">{{ .Summary }}</p>
             </div>
             <div class="post-card__footer">
-              <a href="{{ .Permalink }}" class="post-card__readmore">Read article</a>
+              <a href="{{ .RelPermalink }}" class="post-card__readmore">Read article</a>
             </div>
           </article>
         {{- end }}
